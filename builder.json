@@ -1,0 +1,21 @@
+{
+  "project": "RNTest",
+  "platform": "ios",
+  "github": {
+    "owner": "Interlap01",
+    "repo": "rntest"
+  },
+  "provider": "github",
+  "codemagic": {},
+  "bitrise": {},
+  "ios": {
+    "path": "ios",
+    "bundleId": "run.mobai.rntest"
+  },
+  "flutter": {
+    "watch": {}
+  },
+  "reactNative": {},
+  "kmp": {},
+  "mobai": {}
+}

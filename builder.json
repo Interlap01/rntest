@@ -17,5 +17,13 @@
   },
   "reactNative": {},
   "kmp": {},
-  "mobai": {}
+  "mobai": {},
+  "signing": {
+    "dir": "/Users/dzmitryihilimovich/signing/rntest"
+  },
+  "profiles": {
+    "store": {
+      "distribution": "store"
+    }
+  }
 }

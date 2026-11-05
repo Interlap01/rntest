@@ -1,0 +1,38 @@
+{
+  "build": {
+    "android": {
+      "debug": {
+        "command": "npm install && cd android && ./gradlew assembleDebug",
+        "app": "android/app/build/outputs/apk/debug/*.apk"
+      },
+      "release": {
+        "command": "npm install && cd android && ./gradlew bundleRelease",
+        "app": "android/app/build/outputs/bundle/release/*.aab"
+      },
+      "releaseApk": {
+        "command": "npm install && cd android && ./gradlew assembleRelease",
+        "app": "android/app/build/outputs/apk/release/*.apk"
+      }
+    },
+    "ios": {
+      "debug": {
+        "command": "npm install && cd ios && pod install && xcodebuild -workspace RNTest.xcworkspace -scheme RNTest -configuration Debug -sdk iphonesimulator -derivedDataPath build build",
+        "app": "ios/build/Build/Products/Debug-iphonesimulator/*.app"
+      },
+      "device": {
+        "command": "npm install && cd ios && pod install && xcodebuild -workspace RNTest.xcworkspace -scheme RNTest -configuration Debug -destination generic/platform=iOS -derivedDataPath build -allowProvisioningUpdates build",
+        "app": "ios/build/Build/Products/Debug-iphoneos/*.app"
+      },
+      "release": {
+        "command": "npm install && cd ios && pod install && xcodebuild -workspace RNTest.xcworkspace -scheme RNTest -configuration Release -destination generic/platform=iOS -archivePath build/App.xcarchive -allowProvisioningUpdates archive && xcodebuild -exportArchive -archivePath build/App.xcarchive -exportOptionsPlist \"$MOBAI_EXPORT_OPTIONS\" -exportPath build/ipa -allowProvisioningUpdates",
+        "app": "ios/build/ipa/*.ipa"
+      },
+      "simulatorRelease": {
+        "command": "npm install && cd ios && pod install && xcodebuild -workspace RNTest.xcworkspace -scheme RNTest -configuration Release -sdk iphonesimulator -derivedDataPath build build",
+        "app": "ios/build/Build/Products/Release-iphonesimulator/*.app"
+      }
+    }
+  },
+  "name": "RNTest",
+  "project": "08ee2a74-edcb-4a00-aa7c-40ce3f757031"
+}

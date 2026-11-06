@@ -93,7 +93,8 @@ curl -s -X POST "$API/devices/<device id>/dev" -H "X-Lease-Token: <leaseToken>" 
   -d '{"framework":"flutter","dir":"<absolute path of the project folder>","bundleId":"<bundle id>"}'
 ```
 
-- `framework`: `flutter` or `react-native` (Expo too).
+- `framework`: `flutter` or `react-native` (Expo too). Left out, MobAI reads
+  it from `dir`.
 - `dir`: the project's folder, the one with `pubspec.yaml` or `package.json`,
   or the same folder in your worktree.
 - `bundleId`: when step 2 says the session needs it.
